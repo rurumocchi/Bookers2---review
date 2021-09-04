@@ -13,7 +13,7 @@ class Book < ApplicationRecord
 		favorites.where(user_id: user.id).exists?
 	end
 
-	def self.book_search(keyword)
+	def Book.book_search(keyword)
     Book.where("category LIKE?", "%#{keyword}%")
   end
 
